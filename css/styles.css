@@ -7418,8 +7418,8 @@ textarea.form-control-lg {
 }
 
 .mx-2 {
-  margin-right: 0.5rem !important;
-  margin-left: 0.5rem !important;
+  margin-right: 0.8rem !important;
+  margin-left: 0.8rem !important;
 }
 
 .mx-3 {
@@ -11647,6 +11647,29 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
+
+.signup-section .social{
+  margin-top: 5rem;
+}
+
+.signup-section .social a{
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.signup-section .social a:hover{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.signup-section .social a:active{
+  color: #fff;
+}
+
 .signup-section .form-signup input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
@@ -11696,5 +11719,5 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
