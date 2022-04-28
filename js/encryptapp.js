@@ -37,7 +37,7 @@ function desencriptar(){
                  .normalize();
         //console.log(texto);
 
-        if (desencriptado === '') {
+        if (texto === '') {
             alert("No exite texto para desencriptar");
         } else{
             var desencriptado = texto
