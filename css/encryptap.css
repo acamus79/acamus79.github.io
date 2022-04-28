@@ -1,19 +1,24 @@
 *{
-	box-sizing: border-box;
+	margin: 0;
  }
 
-body{
-	display : flexbox;
-	flex-direction : column;
+html {
+	min-height: 100%;
+	position: relative;
+}
+  
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 0;
+	margin-bottom: 40px;
 }
 
 header{
 	background-color: #04324c;
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	height: 3em;
 	color: #FFF;
-	margin-bottom: 1em;
-	
+	padding: 4px;
+	align-items: center;
 }
 
 header h1{
@@ -21,52 +26,98 @@ header h1{
 	font-size: 2em;
 	display:inline-block;
 	vertical-align:	middle;
-}
-
-header .container:before{
-	content: '';
-	display:inline-block;
-	height: 100%;
-	vertical-align:	middle;
-}
-
-section{
-	margin: 2em 0;
-	overflow: hidden;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	display : flex;
-	flex-direction : row;
+	margin-left: 1em;
 }
 
 ::placeholder {
+	text-align: center;
 	color: blue;
 	font-size: 1.5em;
+	font-style: italic;
   }
 
 .encriptar{
 	padding: 0.8em;
-	width: 40%;
-	height: 20em;
-	margin: auto;
-	display : flex;
-	flex-direction : column;
+	margin-top: 2em;
+	margin-left: 2em;
 	align-items: center;
 	border-radius: 10px;
 }
 
 .desencriptar{
 	padding: 0.8em;
-	width: 40%;
-	height: 20em;
-	margin: auto;
-	display : flex;
-	flex-direction : column;
+	margin-top: 2em;
+	margin-right: 3em;
 	border-radius: 10px;
 	border-color: #588198;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 	align-items: center;
 }
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+	.encriptar{
+		display : flex;
+		flex-direction: row;
+		width: 92%;
+		height: 40%;
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+	.desencriptar{
+		align-items: center;
+		display : flex;
+		flex-direction: row;
+		width: 92%;
+		height: 50%;
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+	.mx-2 {
+		transform: scale(0.50);
+		margin-right: 0.2rem;
+		margin-left: 0.2rem;
+	}
+	.mx-2:hover{
+		transform: scale(0.70);
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+	.btn{
+		height: 0.5em;
+		width: 0.5em;
+	}
+	header h1{
+		font-size: 1.5em;
+	}
+
+  }
+
+  /* For desktop: */  
+@media only screen and (min-width: 768px) {
+	.encriptar{
+		display : flex;
+		flex-direction : column;
+		float: left;
+		width: 50em;
+		height: 20rem;		
+	}
+	.desencriptar{
+		display : flex;
+		flex-direction : column;
+		width: 20em;
+		height: 25rem;
+	}
+	.mx-2 {
+		transform: scale(0.80);
+		margin-right: 0.8rem;
+		margin-left: 0.8rem;
+	}
+	.mx-2:hover{
+		transform: scale(1);
+	}
+  }
+
 
 #frase{
 	padding: 10px;
@@ -79,11 +130,11 @@ section{
 }
 
 #textoEncriptado{
-	background-image: url(/assets/img/encriptar.png);
+	background-image: url(/assets/img/encriptar2.png);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
-	object-fit: contain;
+	object-fit: fill;
 	padding: 10px;
 	width: 95%;
 	height: 88%;
@@ -94,8 +145,8 @@ section{
 }
 
 .btn{
-	margin: 5px 15px;
-	display : inline;
+	margin-top: 2em;
+	margin-left: 2em;
 	width: 8em;
 	height: 3em;
 	border-radius: 15px;
@@ -103,7 +154,7 @@ section{
 	font-weight: bold;
 	text-transform: capitalize;
 	background: #FFF;
-	transition: 0.8s all;
+	transition: 0.7s all;
 	border-color: #135074;
 }
 
@@ -124,10 +175,22 @@ section{
 	color: black;
 }
 
-.footer{
-	padding: 20px;
+footer{
+	padding-top: 1em;
+	height: 3em;
+	width: 100%;
+	background-color: #04324c;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
 	color: aliceblue;
 	font-weight: bold;
-	text-align: center;
-	background-color: #04324c;
+}
+
+.mx-2 {
+	color: rgb(86, 134, 176);
+	float: right;
+}
+.mx-2:hover{
+	color: aliceblue;
 }
