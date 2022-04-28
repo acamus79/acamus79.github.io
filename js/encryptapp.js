@@ -38,7 +38,7 @@ function desencriptar(){
         //console.log(texto);
 
         if (texto === '') {
-            alert("No exite texto para desencriptar");
+            alert("No hay texto para desencriptar!!");
         } else{
             var desencriptado = texto
                                     .replace(/enter/gi, "e")    
@@ -54,8 +54,13 @@ function desencriptar(){
 }
 
 function copiar(){
-    var copiado = document.getElementById('textoEncriptado');
-    copiado.select();
-    document.execCommand('copy');
-    alert("Texto Copiado!")
+    var copiado = document.querySelector("#textoEncriptado");
+    if(copiado.value === ''){
+        alert("No hay nada para copiar!")
+    }else{
+        copiado.select();
+        document.execCommand('copy');
+        alert("Texto Copiado!")
+    }
+
 }
