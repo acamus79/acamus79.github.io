@@ -7,22 +7,33 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/encryptap.css" rel="stylesheet">
 		<title>Desafio Alura Latam - EncryptApp</title>
-	</head>
+		<!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,700&display=swap" rel="stylesheet"> 
+		
+    </head>
+	<!-- Body -->
 	<body>
+		<!-- Header -->
 		<header>
-			<div class="container">
+			<div class="navigator">
 				<h1 class="titulo" id="titulo">EncryptApp</h1>
+				<!-- Iconos -->
+				<a class="mx-2" href="mailto:acamus@tutamail.com" target="_blank1"><i class="fas fa-envelope text-primary fa-3x"></i></a>
+				<a class="mx-2" href="https://t.me/adriancamus" target="_blank1"><i class="fab fa-telegram fa-3x"></i></a>
+				<a class="mx-2" href="https://www.linkedin.com/in/acamus79"target="_blank1"><i class="fab fa-linkedin fa-3x"></i></a>
+				<a class="mx-2" href="https://github.com/acamus79" target="_blank1"><i class="fab fa-github fa-3x"></i></a>
 			</div>
 		</header>
-		<main>
-			<section class="container">
+
+			<div class="container">
 				<div class="encriptar">
 					<textarea id="frase" placeholder="Ingrese el texto a encriptar"></textarea>
 					<div>
 						<input class="btn" type="button" value="encriptar" id="btn-encriptar">
 					</div>
 				</div>
-								
 				<div class="desencriptar">
 					<textarea id="textoEncriptado"></textarea>
 					<div>
@@ -30,21 +41,13 @@
 						<input class="btn" type="button" value="copiar" id="btn-copiar">
 					</div>
 				</div>
-				
-			</section>
-			
-			<section>
-				
-			</section>
+			</div>
 
-		</main>
-		
-		<!-- Footer-->
-        <footer class="footer">
-			<div class="">Copyright &copy; <a href="https://github.com/acamus79" target="_blank1">by acamus79</div>
-		</footer>
-		
 		<script src="js/encryptapp.js"></script>
-
+			
+		<!-- Footer-->
+		<footer>
+			<div>Copyright &copy;  <a href="https://acamus79.github.io/" target="_blank1">by acamus79 </div>
+		</footer>
 	</body>
 </html>
