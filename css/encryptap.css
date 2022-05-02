@@ -10,7 +10,31 @@
   html {
 	min-height: 100%;
 	position: relative;
- }
+}
+  
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 0;
+	margin-bottom: 40px;
+	clear: left;
+	clear: right;
+}
+
+header{
+	background-color: #04324c;
+	height: 3em;
+	color: #FFF;
+	padding: 4px;
+	align-items: center;
+}
+
+header a{
+	padding: 4px;
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+	margin-left: 1em;
+}
 
   body {
     font-size:60.5%;
@@ -50,7 +74,7 @@
   }
 
   #ic{
-    margin-left: 0.8rem;
+    margin:0 0.2em 0 ;
     color: rgb(86, 134, 176);
   }
 
@@ -145,16 +169,23 @@
 }
   
   /* MEDIA QUERY */
-  @media screen and (min-width: 44em) {
-    h1 {
-      font-size:4em;
+  @media  screen and (min-width:480px){
+    header a {
+      font-size: 2em;
+    }
+    footer{
+      margin-top: 1em;
+    }
+    #ic{
+      margin-right: 2em;
     }
     #principal {
-      width: 70%;
+      width: 60%;
     }
     aside {
       width: 29%;
       margin-top:0;
     }
+ 
   }
   
