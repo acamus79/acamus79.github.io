@@ -1,11 +1,10 @@
 const app = document.querySelector('.container');
-const url = 'http://localhost:8080/dwd/all';
+const url = 'https://aec-dwd.herokuapp.com/dwd/all';
     
     fetch(url)
     .then(res => res.json())
     .then(data => {
         data.forEach(api => {
-            //var y = new Date().getFullYear();//para obtener el año actual
             var table = document.getElementById('miTabla')//element html by iD
                 for (var i = 0; i < data.length; i++)
                 {
@@ -16,7 +15,7 @@ const url = 'http://localhost:8080/dwd/all';
                             <td>${data[i].email}</td>
                             <td>${data[i].dancingDate}</td>
                             <td>${data[i].dancingTime}</td>
-                       </tr>`
+                        </tr>`
                 table.innerHTML += fila
                 }
             app.appendChild(api)
