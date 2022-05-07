@@ -39,7 +39,33 @@ background-repeat: no-repeat;
 background-position: 0% -40%;
 background-size: cover;
 background-attachment: scroll;
+}
 
+table{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+th{
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  padding: 0.3em;
+  background-color: dimgray;
+  border: 1px solid #1e1e1f;
+  color: aliceblue;
+  border-collapse: collapse;
+}
+td{
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  color: #1e1e1f;
+  text-align: start;
+  vertical-align: top;
+  padding: 0.3em;
+  border: 1px solid #000;
+  border-collapse: collapse;
 }
 
 #date{
