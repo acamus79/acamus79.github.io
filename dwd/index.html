@@ -21,34 +21,37 @@
     <!-- jquery.qrcode.js -->
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
 </head>
-<body>
+<body id="bg">
     <div class="row justify-content-center align-items-center">
         <div class="container p-4 bg-white text-center">
             <h3>Dancing With Death</h3>
         </div>
 
-    <main class="row justify-content-center" id="bg">
-        
-        <div class="card border-primary mb-3" style="max-width: 40rem;" id="bgDWD">
+    <main class="row justify-content-center">
+        <div class="card borderless-primary mb-3" style="max-width: 40rem;" id="bgDWD">
             <div class="card-header">Select a date to review confirmed appointments</div>
                 <div class="card-body">
                     <label for="inputDate" class="form-label mt-4">Appointment date</label>
                     <input type="date" class="form-control" id="fecha" name="inputDate" aria-describedby="dateHelp">
                     <hr>
-                    <table id="tbDate">
-                        <tr>
-                            <th>Nro</th>
-                            <th>Nombre</th>  
-                            <th>E-Mail</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                        </tr>
-                        <tbody id="miTabla"></tbody>
-                    </table>
+                    <div class="dwdOver">
+                        <table class="table table-responsive table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nro</th>
+                                    <th>Nombre</th>  
+                                    <th>E-Mail</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody id="miTabla"></tbody>
+                        </table>
+                    </div>
                 </div>
         </div>
 
-        <div class="card border-primary mb-3" style="max-width: 40rem;" id="bgDWD">
+        <div class="card borderless-primary mb-3" style="max-width: 40rem;" id="bgDWD">
             <div class="card-header">Planning dates to dance</div>
             <div class="card-body">
                 <h5 class="card-title" id="msg">Make a date with Death</h5>
