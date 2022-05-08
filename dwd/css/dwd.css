@@ -71,22 +71,6 @@ margin-bottom: 4em;
 display: inline-block;
 }
 
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 4em;
-  background-color: #1e1e1f;
-  mix-blend-mode: multiply;
-  padding-top: 5em;
-}
-
-.footer{
-text-align: center;
-margin-top: 2em;
-padding-top: 1em;
-}
-
 .footer-group{
 color: darkgrey;
 text-decoration: none;
