@@ -1,16 +1,16 @@
-//const abecedario = "1234567890abcdefghijklmnñopqrstuvwxyzç., ";
+//const completo = "1234567890abcdefghijklmnñopqrstuvwxyzç., ";
 const querty = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
-const idLetras = document.getElementById("letras");
+const idTeclas = document.getElementById("teclas");
 
 // funcion para mostrar las letras, recibe por parametro el abecedario
 const dibujaTeclas = listadoLetras => {
-    idLetras.innerHTML="";
+    idTeclas.innerHTML="";
     // añadimos las letras
     listadoLetras.split('').map(elemento => {
         let span=document.createElement("span");
         span.addEventListener("click", teclaPulsada);
         span.innerText = elemento;
-        idLetras.appendChild(span);
+        idTeclas.appendChild(span);
     });
 }
 
@@ -24,7 +24,7 @@ function teclaPulsada(e) {
     
     if (querty.indexOf(tecla)>=0) {
         document.getElementById("texto").value+=tecla;
-        tecla.style.color = "indianred";
+        return tecla.value;
     }
 
 }
