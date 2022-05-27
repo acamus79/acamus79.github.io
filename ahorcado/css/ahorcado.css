@@ -1,24 +1,141 @@
 @charset "UTF-8";
 
+.juego-section {
+    padding: 8rem 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 25%, rgba(255, 255, 255, 0.9) 100% );
+    color: rgba(0, 0, 0, 0.6) 25%;
+  }
+  .juego-section .featured-text {
+    padding: 2rem;
+  }
+  @media (min-width: 992px) {
+    .juego-section .featured-text {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #64a19d;
+    }
+  }
+  .juego-section .project-text {
+    padding: 3rem;
+    font-size: 90%;
+  }
+  @media (min-width: 992px) {
+    .juego-section .project-text {
+      padding: 5rem;
+    }
+    .juego-section .project-text hr {
+      border-color: #64a19d;
+      border-width: 0.25rem;
+      width: 30%;
+    }
+  }
+  
+
+.ahorcado{
+    display: grid;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}    
+
+.imagen{
+    position: absolute;
+    scale: 35%;
+}
+
+@media (min-width: 992px) {
+    .imagen {
+        scale: 50%;
+    }
+  }
+
+.imagen:nth-child(1){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(2){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(3){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(4){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(5){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(6){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(7){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+.imagen:nth-child(8){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
+
+.info{
+    position: static;
+    margin:auto;
+	display:block;
+}
+
+
 #teclado {
-    position: relative;
+    position: static;
     width: 100%;
     height: auto;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     background-color: #aaa;
     overflow: hidden;
     align-items: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     border-radius: 8px;
 }
 
+@media (min-width: 992px) {
+    #teclado {
+        padding: 1rem;
+    }
+  }
+
 #teclas>span {
-    padding:0.5em;
-    width: 3.5em;
-    margin: 0.5em;
+    padding: 0.3em;
+    width: 1.5em;
+    margin: 0.2em;
     float:left;
-    align-items: center;
     cursor:pointer;
     border-radius: 5px;
     background-color:white;
@@ -29,13 +146,23 @@
     transition: 0.3s all;
 }
 
+@media (min-width: 992px) {
+    #teclas>span {
+        padding: 0.8rem;
+        width: 2.5em;
+        margin: 0.5em;
+        align-items: center;
+        text-align: center;
+    }
+  }
+
+
 #teclas>span:hover{
     transform: scale(1.20);
     -moz-box-shadow: 0px 5px 0px 0px rgb(45, 45, 45);
     -webkit-box-shadow: 0px 5px 0px 0px rgb(83, 83, 83);
     box-shadow: 0px 5px 0px 0px rgb(77, 74, 77);
 }
-
 
 input {
     margin:20px 0;

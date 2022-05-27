@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet"/>
         <link href="css/ahorcado.css" rel="stylesheet" />
 
     </head>
@@ -33,33 +33,40 @@
             </div>
         </header>
         <!-- Juego -->
-        <section class="projects-section text-center" id="juego">
+        <section class="juego-section text-center" id="juego">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
+                        <div class="ahorcado">
+                            <img class="imagen" src="/assets/img/base.svg" alt="Base Ahorcado">
+                            <img class="imagen" src="/assets/img/1.svg" alt="Soga">
+                            <img class="imagen" src="/assets/img/2.svg" alt="Cabeza">
+                            <img class="imagen" src="/assets/img/3.svg" alt="Cuerpo">
+                            <img class="imagen" src="/assets/img/4.svg" alt="Brazo Derecho">
+                            <img class="imagen" src="/assets/img/5.svg" alt="Brazo Izquierdo">
+                            <img class="imagen" src="/assets/img/6.svg" alt="Pierna Derecha">
+                            <img class="imagen" src="/assets/img/7.svg" alt="Pierna Izquierda">
+                        </div>
                         <h2 class="text-white mb-4"></h2>
                         <p>
                         ...un desarrollador de medios digitales con experiencia, pero sobre todo un excelente analista en la gestión de grandes 
                         problemas, un programador. Siempre quiero aplicar mis conocimientos y habilidades para mejorar continuamente...
                         </p>
-                        <h3>Intentos restantes <span id="intentos"></span>/10</h3>
-                        <div ></div>
-                        <div id="guiones"></div>
                         
-
-                        <input type="text" id="texto" onkeyup="mayusculas(this);">
-                        <div id="teclado">
-                            <div id="teclas"></div>
+                        <div class="info">
+                            <h3>Intentos restantes <span id="intentos"></span>/10</h3>
+                            <div id="guiones"></div>
+                            <input type="text" id="texto" onkeyup="mayusculas(this);">
+                            <div id="teclado">
+                                <div id="teclas"></div>
+                            </div>
                         </div>
-
 
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     <footer class="text-white text-center" style="background-color: #23242a;">
         <!-- Grid container -->
@@ -75,7 +82,6 @@
                         <!-- Github -->
                         <a type="button" class="btn btn-floating btn-sm footer-group" href="https://github.com/acamus79" target="_blank1"><i class="fab fa-github fa-3x"></i></a>
                     </div>
-            
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
@@ -83,7 +89,6 @@
         </div>
     </footer>
 
-
     <script src="js/game.js"></script>
-    
+  
 </html>

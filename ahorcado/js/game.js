@@ -1,18 +1,24 @@
+/*
+ 
+*/
+//Antes de ejecutar el script espera que toda la página se dibuje
+document.addEventListener('DOMContentLoaded', function () {
+
+//==== DECLARACION DE CONSTANTES ====
 //const completo = "1234567890abcdefghijklmnñopqrstuvwxyzç., ";
 //const querty = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
 const abc = "ABCDEFJHIJKLMNÑOPQRSTUVWXYZ"
 const idTeclas = document.getElementById("teclas");
-let palabraJugando = [];
 
-var listaPalabras = ["PYTHON","AZUCAR","MEXICO","RADIO","BITCOIN"];
-let palabraAdivinar = [];
-let palabraMostrar = [];
+// ==== DECLARACION DE VARIABLES ====
+var listaPalabras = ["PYTHON","AZUCAR","MEXICO","RADIO","BITCOIN"];//Array de Palabras para Jugar
+let palabraAdivinar = []; //Array de letras que forman la palabra a adivinar
+let palabraMostrar = []; //Array de guiones y letras para mostrar el desarrollo del juego
 let historialLetrasUsuario = [];
-let numIntentos = 10;
+let numIntentos = 7;
 let guiones = document.getElementById("guiones");
 
 //============== TECLADO ==============
-
 // funcion para mostrar las letras, recibe por parametro el abecedario
 const dibujaTeclas = listadoLetras => {
     idTeclas.innerHTML="";
@@ -24,15 +30,12 @@ const dibujaTeclas = listadoLetras => {
         idTeclas.appendChild(span);
     });
 }
-
-// por defecto indicamos que muestre el teclado querty
+// llamo a la funcion para dibujar las teclas y le indico que muestre el teclado abc
 dibujaTeclas(abc);
 
-// función que recibe la pulsación de la tecla
-// tanto del teclado fisico como del teclado dibujado en la pantalla
+// función que recibe la pulsación de la tecla tanto del teclado fisico como del teclado dibujado en la pantalla
 function teclaPulsada(e) {
     const tecla = this.classList && this.classList.contains("space") ? " " : this.innerText;
-    
     if (abc.indexOf(tecla)>=0) {
         document.getElementById("texto").value+=tecla;
         compara(tecla); //por cada tecla que se pulse llamo a la funcion compara
@@ -46,7 +49,6 @@ function mayusculas(e) {
 }
 
 // =================== JUEGO =====================
-
 
 //de la lista de palabras obtengo una para adivinar de forma aleatoria con random
 palabraAdivinar = listaPalabras[Math.floor(Math.random()*(listaPalabras.length))];
@@ -67,33 +69,55 @@ console.log(palabraMostrar);
 //con el join le digo como quiero que me muestre las uniones de los indices
 guiones.textContent = palabraMostrar.join(' ');
 
-//necesito capturar lo que ingrese el usuario mediante el teclado y cada vez que lo haga
-// esto lo hago con la funcion teclaPulsada del teclado
+/*
+Funcion compara(e): 
+Necesito capturar lo que ingrese el usuario mediante el teclado, cada vez que presione o haga
+click en una tecla debo comparar la letra seleccionada con la palabra elegida aleatoriamente
+esto lo hago desde la funcion teclaPulsada() por cada pulsacion llamo a esta funcion compara()
+*/
 function compara(e){
-
+//por cada posicion del array palabraAdivinar creo una variable letraAdivinar
     for (const [posicion, letraAdivinar] of palabraAdivinar.entries()) {
-        // Comprobamos si la letra del usuario es igual a la letra a adivinar
+        // Compruevo si la letra del usuario es igual a la letra a adivinar
         if (e == letraAdivinar) {
-            // Sustituimos el guion por la letra acertada
+            // si coincide cambio el guion por la letra acertada
             palabraMostrar[posicion] = letraAdivinar;
         }
     }
-    
-    //// 2 Comprobamos si se ha equivocado
-        // ¿No esta la letra?
+// Compruebo si se ha equivocado: si el array palabraAdivinar no contiene la letra elegida
         if (!palabraAdivinar.includes(e)) {
             // Restamos un intento
             numIntentos -= 1;
-            // Guardamos en el historial la letra pulsada por el usuario
+            // Guardo en el historial la letra pulsada por el usuario
             historialLetrasUsuario.push(e);
         }
 console.log(palabraMostrar)
 muestraJuego();
+ahorcado();
 
 }
 
-function muestraJuego () {
+function muestraJuego() {
+
     guiones.textContent = palabraMostrar.join(' ');
     //Muestro la cantidad de intentos
     document.getElementById("intentos").textContent = numIntentos;
 }
+
+function ahorcado() {
+    // Reviso si quedan guiones
+    if (!palabraMostrar.includes('_')) {
+        alert('Has ganado!!!');
+        //Recargo la página para volver a jugar
+        location.reload(true);
+    }
+    // Reviso intentos
+    if (numIntentos == 0) {
+        alert('Has Perdido!!! La palabra era: ' + palabraAdivinar.join(''));
+        //Recargo la página para volver a jugar
+        location.reload(true);
+    }
+}
+
+// ==== FIN ====
+});
