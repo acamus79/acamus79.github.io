@@ -32,20 +32,18 @@
 
 .ahorcado{
     display: grid;
-    height: 500px;
-    width: 500px;
-    margin: auto;
+    margin: 0 auto;
 }    
 
 .imagen{
     position: absolute;
-    scale: 35%;
+    scale: 33%;
 }
 
 @media (min-width: 992px) {
     .imagen {
-        scale: 50%;
-        
+        scale: 40%;
+        padding-bottom: 2em;
     }
   }
 
@@ -133,8 +131,18 @@
 
 .info{
     position: static;
-    margin:auto;
+    margin: 6em auto;
 	display:block;
+}
+
+#guiones{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#historial{
+    color: chocolate!important;
 }
 
 
@@ -153,14 +161,18 @@
 
 @media (min-width: 992px) {
     #teclado {
-        padding: 1rem;
+        padding-top: 1em;
+        
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
   }
 
 #teclas>span {
-    padding: 0.3em;
-    width: 1.5em;
-    margin: 0.2em;
+    font-size: small;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 1.8em;
+    margin: 0.2em 0.2em 0.2em 0.2em;
     float:left;
     cursor:pointer;
     border-radius: 5px;
@@ -174,9 +186,10 @@
 
 @media (min-width: 992px) {
     #teclas>span {
-        padding: 0.8rem;
-        width: 2.5em;
-        margin: 0.5em;
+        font-size: medium;
+        padding: 0.5rem;
+        width: 2.3em;
+        margin: 0.3em;
         align-items: center;
         text-align: center;
     }

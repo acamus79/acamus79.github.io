@@ -1,5 +1,11 @@
 /*
- 
+    El Clásico juego del Ahorcado en una aplicación WEB desarrollada solo con 
+    propósitos educativos en el marco del programa ONE-Oracle Next Education, 
+    para ser presentado en el Challenge Oracle ONE Sprint 02: Crea tu propio 
+    juego del ahorcado con Javascript.
+    Por su naturazleza este Script posee comentarios para poder ayudar 
+    para seguir informacion en la consola se puede descomentar las líneas:
+    25 - 62 -  66 - 67 - 73 - 74 - 103
 */
 //Antes de ejecutar el script espera que toda la página se dibuje
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,11 +17,12 @@ const abc = "ABCDEFJHIJKLMNÑOPQRSTUVWXYZ"
 const idTeclas = document.getElementById("teclas");
 
 // ==== DECLARACION DE VARIABLES ====
-var listaPalabras = ["PYTHON","AZUCAR","MEXICO","RADIO","BITCOIN"];//Array de Palabras para Jugar
+var listaPalabras = ["PARLANTE","AZUCAR","ARGENTINA","RADIO","FOTOGRAFIA", "IMPRESORA", "MASCOTA"];//Array de Palabras para Jugar
 let palabraAdivinar = []; //Array de letras que forman la palabra a adivinar
 let palabraMostrar = []; //Array de guiones y letras para mostrar el desarrollo del juego
 let historialLetrasUsuario = [];
 let numIntentos = 7;
+// console.log("Los Intentos que tengo para adivinar: " + numIntentos);
 let guiones = document.getElementById("guiones");
 
 //============== TECLADO ==============
@@ -52,19 +59,19 @@ function mayusculas(e) {
 
 //de la lista de palabras obtengo una para adivinar de forma aleatoria con random
 palabraAdivinar = listaPalabras[Math.floor(Math.random()*(listaPalabras.length))];
-console.log("Aca solo elegi la palabra = " + palabraAdivinar);
+// console.log("Aca solo elegi la palabra = " + palabraAdivinar);
 
 //esa palabra la transformo en un array de letras
 palabraAdivinar = palabraAdivinar.split('');
-console.log("Aca la separe en letras = " + palabraAdivinar);
-console.log(palabraAdivinar);
+// console.log("Aca la separe en letras = " + palabraAdivinar);
+// console.log(palabraAdivinar);
 //necesito un array de guiones con el mismo indice que la palabra a adivinar
 //recorro la palabra y por cada posicion asigno un guion en mi array para mostrar
 palabraAdivinar.forEach(element => {
     palabraMostrar.push('_');
 });
-console.log("Aca hice que los guiones a mostrar tengan el mismo indice de la palabra = " + palabraMostrar);
-console.log(palabraMostrar);
+// console.log("Aca hice que los guiones a mostrar tengan el mismo indice de la palabra = " + palabraMostrar);
+// console.log(palabraMostrar);
 //ahora le tengo que mostrar al usuario ese array de guiones
 //con el join le digo como quiero que me muestre las uniones de los indices
 guiones.textContent = palabraMostrar.join(' ');
@@ -93,19 +100,28 @@ function compara(e){
             // Guardo en el historial la letra pulsada por el usuario
             historialLetrasUsuario.push(e);
         }
-console.log(palabraMostrar)
+//console.log(palabraMostrar)
 muestraJuego();
 ahorcado();
-
 }
-
+/*
+Funcion muestraJuego(): 
+Esta funcion solo muestra la palabra a adivinar, las letras acertadas
+y la cantidad de intentos restantes
+*/
 function muestraJuego() {
-
     guiones.textContent = palabraMostrar.join(' ');
     //Muestro la cantidad de intentos
     document.getElementById("intentos").textContent = numIntentos;
+    //Muestro las letras que ya selecciono el usuario
+    document.getElementById("historial").textContent = historialLetrasUsuario.join(' ');
 }
 
+/*
+Funcion ahorcado(): 
+Utilizo esta funcion para revisar si el usuario perdio o gano
+en cada caso recargo la pagina para volver a jugar
+*/
 function ahorcado() {
     // Reviso si quedan guiones
     if (!palabraMostrar.includes('_')) {
@@ -120,7 +136,11 @@ function ahorcado() {
         location.reload(true);
     }
 }
-
+/*
+Funcion mostrarImagen(intentos):
+Con esta funcion mediante un Switch, muestro la imagen del ahorcado
+segun la cantidad de intentos que quedan
+*/
 function mostrarImagen(numIntentos){
     switch (numIntentos) {
         case 0:
@@ -144,13 +164,9 @@ function mostrarImagen(numIntentos){
         case 6:
             document.getElementById("img1").style.visibility = "visible";
             break;
-
 }
 
 }
-
-
-
 
 // ==== FIN ====
 });

@@ -38,30 +38,23 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <div class="ahorcado">
-                            <img class="imagen" src="/assets/img/base.svg" alt="Base Ahorcado">
-                            <img class="imagen" src="/assets/img/1.svg" alt="Soga">
-                            <img class="imagen" src="/assets/img/2.svg" alt="Cabeza">
-                            <img class="imagen" src="/assets/img/3.svg" alt="Cuerpo">
-                            <img class="imagen" src="/assets/img/4.svg" alt="Brazo Derecho">
-                            <img class="imagen" src="/assets/img/5.svg" alt="Brazo Izquierdo">
-                            <img class="imagen" src="/assets/img/6.svg" alt="Pierna Derecha">
-                            <img class="imagen" src="/assets/img/7.svg" alt="Pierna Izquierda">
+                            <img class="imagen" src="assets/img/base.svg" alt="Base Ahorcado">
+                            <img id="img1" class="imagen" src="assets/img/1.svg" alt="Soga">
+                            <img id="img2" class="imagen" src="assets/img/2.svg" alt="Cabeza">
+                            <img id="img3" class="imagen" src="assets/img/3.svg" alt="Cuerpo">
+                            <img id="img4" class="imagen" src="assets/img/4.svg" alt="Brazo Derecho">
+                            <img id="img5" class="imagen" src="assets/img/5.svg" alt="Brazo Izquierdo">
+                            <img id="img6" class="imagen" src="assets/img/6.svg" alt="Pierna Derecha">
+                            <img id="img7" class="imagen" src="assets/img/7.svg" alt="Pierna Izquierda">
                         </div>
-                        <h2 class="text-white mb-4"></h2>
-                        <p>
-                        ...un desarrollador de medios digitales con experiencia, pero sobre todo un excelente analista en la gestión de grandes 
-                        problemas, un programador. Siempre quiero aplicar mis conocimientos y habilidades para mejorar continuamente...
-                        </p>
-                        
-                        <div class="info">
-                            <h3>Intentos restantes <span id="intentos"></span>/10</h3>
-                            <div id="guiones"></div>
-                            <input type="text" id="texto" onkeyup="mayusculas(this);">
-                            <div id="teclado">
-                                <div id="teclas"></div>
-                            </div>
+                        <input type="text" id="texto" onkeyup="mayusculas(this);">
+                    </div>
+                    <div class="info col-lg-8 p-4">
+                        <h3>Intentos <span id="intentos"></span>/7 - <span id="historial"></span></h3>
+                        <div id="guiones"></div>
+                        <div id="teclado">
+                            <div id="teclas"></div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -70,9 +63,9 @@
     </body>
     <footer class="text-white text-center" style="background-color: #23242a;">
         <!-- Grid container -->
-                    <h5 class="text-uppercase mb-4 pb-1"> <a class="footer-group" href="https://acamus79.github.io/dwd/dwd_about">About</a></h5>
+                    <h5 class="text-uppercase mb-4 pb-1">About</a></h5>
                     <p>
-                    El Ahorcado is a web application developed for educational purposes.
+                        El Clásico juego del Ahorcado en una aplicación WEB desarrollada solo con propósitos educativos en el marco del programa ONE-Oracle Next Education, para ser presentado en el Challenge Oracle ONE Sprint 02: Crea tu propio juego del ahorcado con Javascript.
                     </p>
                     <div class="mt-2">
                         <!-- Dribbble -->
