@@ -45,6 +45,7 @@
 @media (min-width: 992px) {
     .imagen {
         scale: 50%;
+        
     }
   }
 
@@ -104,6 +105,31 @@
     margin-top: 50px;
 }
 
+#img1{
+    visibility: hidden;
+}
+#img2{
+    visibility: hidden;
+}
+#img3{
+    visibility: hidden;
+}
+#img4{
+    visibility: hidden;
+}
+#img5{
+    visibility: hidden;
+}
+#img6{
+    visibility: hidden;
+}
+#img7{
+    visibility: hidden;
+}
+
+#texto{
+    visibility: hidden;
+}
 
 .info{
     position: static;

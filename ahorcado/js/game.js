@@ -88,6 +88,8 @@ function compara(e){
         if (!palabraAdivinar.includes(e)) {
             // Restamos un intento
             numIntentos -= 1;
+            //aca debo llamar a la funcion para que muestre u oculte imagen
+            mostrarImagen(numIntentos);
             // Guardo en el historial la letra pulsada por el usuario
             historialLetrasUsuario.push(e);
         }
@@ -118,6 +120,37 @@ function ahorcado() {
         location.reload(true);
     }
 }
+
+function mostrarImagen(numIntentos){
+    switch (numIntentos) {
+        case 0:
+            document.getElementById("img7").style.visibility = "visible";
+            break;
+        case 1:
+            document.getElementById("img6").style.visibility = "visible";
+            break;
+        case 2:
+            document.getElementById("img5").style.visibility = "visible";
+            break;
+        case 3:
+            document.getElementById("img4").style.visibility = "visible";
+            break;
+        case 4:
+            document.getElementById("img3").style.visibility = "visible";
+            break;
+        case 5:
+            document.getElementById("img2").style.visibility = "visible";
+            break;
+        case 6:
+            document.getElementById("img1").style.visibility = "visible";
+            break;
+
+}
+
+}
+
+
+
 
 // ==== FIN ====
 });
