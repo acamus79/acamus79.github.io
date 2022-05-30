@@ -55,11 +55,11 @@ function muestraJuego() {
 }
 function ahorcado() {
     if (!palabraMostrar.includes('_')) {
-        alert('Has ganado!!!');
+        alert('Ganaste, felicidades!!!');
         location.reload(true);
     }
     if (numIntentos == 0) {
-        alert('Has Perdido!!! La palabra era: ' + palabraAdivinar.join(''));
+        alert('FIN DEL JUEGO!!! La palabra era: ' + palabraAdivinar.join(''));
         location.reload(true);
     }
 }
