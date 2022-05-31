@@ -42,7 +42,6 @@ function compara(e){
     }
         if (!palabraAdivinar.includes(e) && !historialLetrasUsuario.includes(e)) {
             numIntentos -= 1;
-            mostrarImagen(numIntentos);
             historialLetrasUsuario.push(e);
         }
 muestraJuego();
@@ -52,15 +51,20 @@ function muestraJuego() {
     guiones.textContent = palabraMostrar.join(' ');
     document.getElementById("intentos").textContent = numIntentos;
     document.getElementById("historial").textContent = historialLetrasUsuario.join(' ');
+    mostrarImagen(numIntentos);
 }
 function ahorcado() {
     if (!palabraMostrar.includes('_')) {
-        alert('Ganaste, felicidades!!!');
-        location.reload(true);
+        winner()
+        setTimeout(function(){
+            location.reload(true);
+        },5000);
     }
     if (numIntentos == 0) {
-        alert('FIN DEL JUEGO!!! La palabra era: ' + palabraAdivinar.join(''));
-        location.reload(true);
+        mostrarImagen(0);
+        setTimeout(function(){
+            location.reload(true);
+        },5000);
     }
 }
 function mostrarImagen(numIntentos){
@@ -87,6 +91,17 @@ function mostrarImagen(numIntentos){
             document.getElementById("img1").style.visibility = "visible";
             break;
 }
-
 }
+
+function winner(){
+    document.getElementById("img7").style.visibility = "hidden";
+    document.getElementById("img6").style.visibility = "hidden";
+    document.getElementById("img5").style.visibility = "hidden";
+    document.getElementById("img4").style.visibility = "hidden";
+    document.getElementById("img3").style.visibility = "hidden";
+    document.getElementById("img2").style.visibility = "hidden";
+    document.getElementById("img1").style.visibility = "hidden";
+    document.getElementById("img8").style.visibility = "visible";
+}
+
 });

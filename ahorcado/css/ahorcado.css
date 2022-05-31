@@ -1,24 +1,27 @@
 @charset "UTF-8";
 
 .juego-section {
-    padding: 8rem 0;
+    padding-top: 8em;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 25%, rgba(255, 255, 255, 0.9) 100% );
     color: rgba(0, 0, 0, 0.6) 25%;
 }
 
 .ahorcado{
-    display: grid;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 0.5em auto;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
 }    
 
 .imagen{
     position: absolute;
-    scale: 30%;
+    max-width: 55%;
 }
 
 @media (min-width: 992px) {
     .imagen {
-        scale: 40%;
+        max-width: 25%;
         padding-bottom: 2em;
     }
 }
@@ -79,6 +82,13 @@
     margin-top: 50px;
 }
 
+.imagen:nth-child(9){
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1;
+    margin-top: 50px;
+}
+
 #img1{
     visibility: hidden;
 }
@@ -100,15 +110,16 @@
 #img7{
     visibility: hidden;
 }
+#img8{
+    visibility: hidden;
+}
 
 #texto{
     visibility: hidden;
 }
 
 .info{
-    position: static;
-    margin: 6em auto;
-	display:block;
+    margin: 8rem auto;
 }
 
 #guiones{
@@ -137,7 +148,6 @@
 @media (min-width: 992px) {
     #teclado {
         padding-top: 1em;
-        
         margin-top: 1em;
         margin-bottom: 1em;
     }
