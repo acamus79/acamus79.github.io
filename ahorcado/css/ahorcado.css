@@ -4,28 +4,32 @@
     padding: 8rem 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 25%, rgba(255, 255, 255, 0.9) 100% );
     color: rgba(0, 0, 0, 0.6) 25%;
-  }
-  .juego-section .featured-text {
+}
+
+.juego-section .featured-text {
     padding: 2rem;
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .juego-section .featured-text {
-      padding: 0 0 0 2rem;
-      border-left: 0.5rem solid #64a19d;
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
     }
-  }
-  .juego-section .project-text {
+}
+
+.juego-section .project-text {
     padding: 3rem;
     font-size: 90%;
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .juego-section .project-text {
-      padding: 5rem;
+    padding: 5rem;
     }
     .juego-section .project-text hr {
-      border-color: #64a19d;
-      border-width: 0.25rem;
-      width: 30%;
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 30%;
     }
 }
 
@@ -41,7 +45,7 @@
 
 @media (min-width: 992px) {
     .imagen {
-        scale: 35%;
+        scale: 40%;
         padding-bottom: 2em;
     }
 }
@@ -144,7 +148,6 @@
     color: chocolate!important;
 }
 
-
 #teclado {
     position: static;
     width: 100%;
@@ -165,7 +168,7 @@
         margin-top: 1em;
         margin-bottom: 1em;
     }
-  }
+}
 
 #teclas>span {
     font-size: small;
@@ -192,8 +195,7 @@
         align-items: center;
         text-align: center;
     }
-  }
-
+}
 
 #teclas>span:hover{
     transform: scale(1.20);
@@ -216,9 +218,9 @@ footer{
     text-decoration: none;
     display: inline-block;
     transition: 0.8;
-    }
-    
+}
+
 .footer-group:hover{
     color: whitesmoke;
     scale: 1.2;
-    }
+}
