@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-const abc = "ABCDEFJHIJKLMNÑOPQRSTUVWXYZ"
+const abc = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 const idTeclas = document.getElementById("teclas");
 var listaPalabras = ["PARLANTE","AZUCAR","ARGENTINA","RADIO","FOTOGRAFIA", "IMPRESORA", "MASCOTA"];//Array de Palabras para Jugar
-let palabraAdivinar = []; //Array de letras que forman la palabra a adivinar
-let palabraMostrar = []; //Array de guiones y letras para mostrar el desarrollo del juego
+let palabraAdivinar = [];
+let palabraMostrar = []; 
 let historialLetrasUsuario = [];
 let numIntentos = 7;
 let guiones = document.getElementById("guiones");
@@ -40,7 +40,7 @@ function compara(e){
             palabraMostrar[posicion] = letraAdivinar;
         }
     }
-        if (!palabraAdivinar.includes(e)) {
+        if (!palabraAdivinar.includes(e) && !historialLetrasUsuario.includes(e)) {
             numIntentos -= 1;
             mostrarImagen(numIntentos);
             historialLetrasUsuario.push(e);
