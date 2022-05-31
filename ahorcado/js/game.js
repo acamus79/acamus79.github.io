@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 const abc = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 const idTeclas = document.getElementById("teclas");
-var listaPalabras = ["PARLANTE","AZUCAR","ARGENTINA","RADIO","FOTOGRAFIA", "IMPRESORA", "MASCOTA"];//Array de Palabras para Jugar
+var listaPalabras = ["PARLANTE","AZUCAR","ARGENTINA","RADIO","FOTOGRAFIA", "IMPRESORA", "MASCOTA", "TECLADO", "VENTANA", "MICROONDAS"];
 let palabraAdivinar = [];
 let palabraMostrar = []; 
 let historialLetrasUsuario = [];
