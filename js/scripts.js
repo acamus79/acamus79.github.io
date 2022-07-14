@@ -52,3 +52,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//Reload any iframe in bootstrap modal on hide.bs.modal event.
+//The setTimeout delay added for fixing iframe rendering after src reset.
+$('.modal').on('hidden.bs.modal', function (event){
+    let iframes = event.target.getElementsByTagName('iframe');
+    for (let i = 0; i < iframes.length; i++) {
+        let src_tmp = iframes[i].src;
+        iframes[i].src = '';
+        setTimeout(() => {
+            iframes[i].src = src_tmp;
+        }, 100);
+    }
+});
