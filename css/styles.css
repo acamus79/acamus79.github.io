@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Freelancer v7.0.6 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+/* CSS Document */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -53,7 +43,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: 'Montserrat',"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -11337,7 +11327,10 @@ html {
 .divider-custom.divider-light .divider-custom-icon {
   color: #fff;
 }
-
+.divider-modal{
+  display: flex;
+  justify-content: space-around;
+}
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
@@ -11443,6 +11436,12 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+}
+.mastead-background{
+  background-image: url('../assets/img/devicon.svg');
+  background-color: #1abc9c;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 @media (min-width: 992px) {
