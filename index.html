@@ -10,13 +10,14 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/lite-yt-embed.css">
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
@@ -44,7 +45,7 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead mastead-background text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <img class="masthead-avatar mb-5" src="assets/img/me.webp" alt="..." />
@@ -53,7 +54,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
@@ -68,7 +69,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Portfolio Grid Items-->
@@ -150,7 +151,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- About Section Content-->
@@ -187,7 +188,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Contact Section Form-->
@@ -279,9 +280,12 @@
                                     <div class="divider-custom-icon"><i class="fa-solid fa-rocket"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/FigmaONG.webp"
-                                    alt="..." />
+                                <!-- Portfolio Modal - Video-->
+                                <lite-youtube videoid="ZeZzy2XrEO0"
+                                    style="background-image: url('https://i.ytimg.com/vi/ZeZzy2XrEO0/hqdefault.jpg');"
+                                    params="controls=0&modestbranding=2&rel=0&enablejsapi=1">
+                                </lite-youtube>
+                                <br><br>
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">
                                     Es el BackEnd de un portal web de una ONG fue desarrollado como parte
@@ -291,15 +295,15 @@
                                     de la Organización, y otras funcionalidades como el almacenamiento de archivos en un
                                     bucket de Amazon AWS S3, así como el envío automático de correos electrónicos.
                                 </p>
-                                <form>
+                                <div class="divider-modal">
                                     <a href="https://documenter.getpostman.com/view/21639215/UzBsHj42" target="_blank">
                                         <input type="button" value="Ver Documentacion" class="btn btn-primary">
                                     </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Cerrar Ventana
                                     </button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -324,15 +328,14 @@
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Video-->
-                                <iframe class="lazy" width="100%" height="315"
-                                    src="https://www.youtube.com/embed/D_LySQhG88o" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <lite-youtube videoid="D_LySQhG88o"
+                                    style="background-image: url('https://i.ytimg.com/vi/D_LySQhG88o/hqdefault.jpg');"
+                                    params="controls=0&modestbranding=2&rel=0&enablejsapi=1">
+                                </lite-youtube>
                                 <br><br>
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">
@@ -341,7 +344,7 @@
                                     Final
                                     en el Curso Análisis de Datos de la Fundación Santísima Trinidad
                                 </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <button class="btn btn-danger" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Cerrar Ventana
                                 </button>
@@ -368,21 +371,15 @@
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
-                                <!-- Portfolio Modal - Video
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/DWDScreen.webp"
-                                    alt="..." />
-                                -->
-                                <iframe class="lazy" width="100%" height="315"
-                                    src="https://www.youtube.com/embed/ih31xaKNmoc" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-                                </iframe>
+                                <!-- Portfolio Modal - Video-->
+                                <lite-youtube videoid="ih31xaKNmoc"
+                                    style="background-image: url('https://i.ytimg.com/vi/ih31xaKNmoc/hqdefault.jpg');"
+                                    params="controls=0&modestbranding=2&rel=0&enablejsapi=1">
+                                </lite-youtube>
                                 <br><br>
-
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">
                                     Dancing Whit Death, es una aplicación web desarrollada con fines
@@ -394,15 +391,15 @@
                                     implica un gran
                                     desafio del manejo del tiempo, el uso de QR y la exportación de datos.
                                 </p>
-                                <form>
+                                <div class="divider-modal">
                                     <a href="https://acamus79.github.io/dwd" target="_blank">
                                         <input type="button" value="Probar Aplicación" class="btn btn-primary">
                                     </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Cerrar Ventana
                                     </button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -426,7 +423,7 @@
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
@@ -439,15 +436,15 @@
                                     ONE-Oracle Next Education, para ser presentado en el Challenge Oracle ONE Sprint 02:
                                     Crea tu propio juego del ahorcado con Javascript
                                 </p>
-                                <form>
+                                <div class="divider-modal">
                                     <a href="https://acamus79.github.io/ahorcado/" target="_blank">
                                         <input type="button" value="Probar Aplicación" class="btn btn-primary">
                                     </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Cerrar Ventana
                                     </button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -471,7 +468,7 @@
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
@@ -484,15 +481,15 @@
                                     ONE-Oracle Next Education, muestra como es posible encriptar y desencriptar un texto
                                     solo con el uso de Javascript
                                 </p>
-                                <form>
+                                <div class="divider-modal">
                                     <a href="https://acamus79.github.io/encryptapp" target="_blank">
                                         <input type="button" value="Probar Aplicación" class="btn btn-primary">
                                     </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Cerrar Ventana
                                     </button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -516,18 +513,17 @@
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-icon"><i class="fa-brands fa-connectdevelop"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Video-->
-                                <iframe class="lazy" width="100%" height="315"
-                                    src="https://www.youtube.com/embed/2ba4ZW6Vrxw" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <lite-youtube videoid="2ba4ZW6Vrxw"
+                                    style="background-image: url('https://i.ytimg.com/vi/2ba4ZW6Vrxw/hqdefault.jpg');"
+                                    params="controls=0&modestbranding=2&rel=0&enablejsapi=1">
+                                </lite-youtube>
                                 <br> <br>
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">
+                                <p class=" mb-4">
                                     Biblioteca - Gestión de Libros Web, es una aplicación web completa para gestionar
                                     una Librería ó una Biblioteca. El objetivo de este ejercicio consiste en el
                                     desarrollo de un sistema web de
@@ -539,11 +535,11 @@
                                     controlar existencias, devoluciones,
                                     etc. Además de los puntos solicitados, se implementó la carga de imágenes para las
                                     portadas de los libros y la exportación de datos a PDF.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Cerrar Ventana
-                                </button>
+                                    </p>
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Cerrar Ventana
+                                    </button>
                             </div>
                         </div>
                     </div>
@@ -559,6 +555,7 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/lite-yt-embed.js"></script>
     <!-- Vanilla-LazyLoad Core JS-->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.2/dist/lazyload.min.js"></script>
 </body>
