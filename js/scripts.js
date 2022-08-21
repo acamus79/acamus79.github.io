@@ -67,3 +67,5 @@ $('.modal').on('hidden.bs.modal', function (event){
         }, 100);
     }
 });
+
+
