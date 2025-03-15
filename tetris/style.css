@@ -167,7 +167,7 @@ button:hover {
 /* Historia del Tetris */
 .history {
     text-align: left;
-    font-size: small;
+    font-size: medium;
 }
 
 .game-info {
