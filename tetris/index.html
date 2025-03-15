@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Retro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Contenido izquierdo (escritorio) -->
+        <div id="left-panel" class="left-panel">
+            <h1>Tetris Retro</h1>
+            <div class="controls">
+                <h3>Controles:</h3>
+                <ul>
+                    <li><strong>Esc:</strong> Pausa</li>
+                    <li><strong>Shift:</strong> Rotar pieza</li>
+                    <li><strong>Flechas:</strong> Mover piezas</li>
+                </ul>
+            </div>
+            <div id="tetris-history" class="history">
+                <h2>Historia del Tetris</h2>
+                <p>
+                    Tetris es un videojuego de puzzle diseñado por Alekséi Pázhitnov en 1984. Fue creado mientras trabajaba en la Academia de Ciencias de Moscú. El juego se basa en la idea de organizar piezas geométricas llamadas "tetrominós" para formar líneas completas sin dejar huecos. Tetris se convirtió rápidamente en un fenómeno mundial y sigue siendo uno de los videojuegos más populares de todos los tiempos. 
+                </p>
+                <p>Hecho con amor solo con fines educativos y como un homenaje.</p>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    2025 Año de la reconstruccion Argentina © Copyright:
+                    <a class="retro-text" href="https://github.com/acamus79">acamus79</a>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Juego -->
+        <div class="game-area">
+            <div class="game-info">
+                <p>Nivel: <span id="level">1</span> - Puntuación: <span id="score">0</span></p>
+            </div>
+            <canvas id="tetris-board"></canvas>
+            <div id="pause-overlay" style="display: none;">PAUSA</div>
+            <div id="game-over-overlay" style="display: none;">
+                <div class="game-over-content">
+                    <div class="game-over-text">FIN DEL JUEGO</div>
+                    <div class="game-over-score">Puntuación final: <span id="final-score">0</span></div>
+                    <div class="game-over-input">
+                        <p>Ingresa tus iniciales:</p>
+                        <input type="text" id="player-initials" maxlength="3" placeholder="ABC">
+                    </div>
+                    <div class="game-over-buttons">
+                        <button id="save-score">Guardar puntuación</button>
+                        <button id="restart-game">Volver a empezar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
